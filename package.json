@@ -1,0 +1,25 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Only for my private project.",
+  "main": "\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Cmmall前端代码\u001b[B",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eredaryy/hello-world.git"
+  },
+  "author": "eredar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eredaryy/hello-world/issues"
+  },
+  "homepage": "https://github.com/eredaryy/hello-world#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.7",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.19.0",
+    "webpack": "^1.15.0"
+  }
+}
