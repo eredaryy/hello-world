@@ -2,12 +2,16 @@
 * @Author: eredaryy
 * @Date:   2017-10-22 15:21:13
 * @Last Modified by:   eredaryy
-* @Last Modified time: 2017-10-24 22:32:29
+* @Last Modified time: 2017-10-24 23:27:02
 */
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+//环境变量的配置  dev/online
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+
 //获取html-webpack-plugin参数的方法
 var getHtmlConfig = function(name,title){
     return {
@@ -16,8 +20,8 @@ var getHtmlConfig = function(name,title){
             inject:true,
             hash:true,
             chunks:['common',name]
-    }
-}
+    };
+};
 var config = {
     entry: {
         'common' : ['./src/page/common/index.js'],
@@ -26,6 +30,7 @@ var config = {
     },
     output: {
         path: __dirname + '/dist/',
+        publicPath:'/dist/',
         filename: 'js/[name].js'
     },
     externals: {
@@ -51,4 +56,7 @@ var config = {
     ]
 };
 
+if('dev' === WEBPACK_ENV){
+    config.entry.common.push('webpack-dev-server/client?http://localhost:8088');
+}
 module.exports = config

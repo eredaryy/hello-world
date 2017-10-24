@@ -2,8 +2,10 @@
 * @Author: eredaryy
 * @Date:   2017-10-22 16:15:07
 * @Last Modified by:   eredaryy
-* @Last Modified time: 2017-10-24 22:37:36
+* @Last Modified time: 2017-10-24 23:30:18
 */
 body{
     background: #ccc;
+    color: black;
+    font-size: 50px;
 }
